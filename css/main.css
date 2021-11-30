@@ -1,0 +1,144 @@
+/* 
+* Challenge Name    : عناوين بأكثر من شكل
+* Start Date        : 30-11-2021
+* End Date          : 30-11-2021
+* Contact Us        : mohammedmodather144@gmail.com
+* Git Hub url       : https://github.com/MohammedModather2020
+*/
+/* 
+* 1- General Style
+   1.0- universal element
+   1.1- Body Style
+* 2- Section Style
+   2.0- Container Shape
+   2.1- Container Shape Circle
+   2.2- Container Triangle Up & Down
+* 3- Common Style 
+   3.0- Font Family
+   3.1- Shape Line
+   3.2- Topography
+*/
+/* 1- General Style */
+/*  1.0- universal element */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 1.1- Body Style */
+body{
+  font-family: 'DroidKufi-Regular', sans-serif;
+  background-color: #EEEEEE;
+}
+/* 2- Section Style */
+/*  2-0 Container Shape */
+.container-shape{
+  width: 500px;
+  margin: auto;
+  margin-top: 2rem;
+  padding: .5rem;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+}
+.container-shape .title{
+  font-size: 1.3rem;
+  color: #333333;
+  margin-top: .5rem;
+}
+.container-shape .sub-title{
+  font-size: .9rem;
+  margin-block: .5rem;
+}
+/* 2.1- Container Shape Circle */
+.container-shape .container-circle .line::before{
+  border-radius: 50%;
+}
+/* 2.2- Container Triangle Up & Down */
+.container-shape .container-triangle-up .line::before{
+  border-width: 0 7.5px 7.5px;
+}
+.container-shape .container-triangle-down .bg-primary.line::before,
+.container-shape .container-triangle-up .bg-primary.line::before{
+  border-color: #2C6CCF transparent;
+}
+.container-shape .container-triangle-down .bg-red.line::before,
+.container-shape .container-triangle-up .bg-red.line::before{
+  border-color: #CF2C2C transparent;
+}
+.container-shape .container-triangle-down .bg-green.line::before,
+.container-shape .container-triangle-up .bg-green.line::before{
+  border-color: #309E0E transparent;
+}
+.container-shape .container-triangle-down .bg-orange.line::before,
+.container-shape .container-triangle-up .bg-orange.line::before{
+  border-color: #CD661A transparent;
+}
+.container-shape .container-triangle-down .line::before{
+  border-width: 7.5px 7.5px 0px;
+  bottom: -7.5px;
+  top: 0 !important;
+  left: -2px;
+
+}
+/*  3.0- Font Family */
+@font-face{
+  src: url(../assets/fonts/DroidKufi-Regular.ttf);
+  font-family: 'DroidKufi-Regular';
+}
+/* 3.1- Shape Line */
+.line{
+  position: relative;
+  width: 80%;
+  border: 0;
+  height: 2px;
+  background-color: #ccc;
+}
+.line::after{
+  content: "";
+  display: block;
+  width: 55%;
+  position: absolute;
+  left: 0;
+  border: 1px solid;
+  z-index: 1;
+}
+.line::before{
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: -7.5px;
+  z-index: 2;
+  border-width: 7px;
+  border-style: solid;
+}
+.bg-primary.line::after,
+.bg-primary.line::before{
+  border-color: #2C6CCF ;
+}
+.bg-red.line::after,
+.bg-red.line::before{
+  border-color: #CF2C2C;
+}
+.bg-green.line::after,
+.bg-green.line::before{
+  border-color: #309E0E ;
+}
+.bg-orange.line::after,
+.bg-orange.line::before{
+  border-color: #CD661A;
+}
+/* 3.2- Topography */
+.tx-primary{
+  color: #2C6CCF;
+}
+.tx-red{
+  color: #CF2C2C;
+}
+.tx-green{
+  color: #309E0E;
+}
+.tx-orange{
+  color: #CD661A;
+}
